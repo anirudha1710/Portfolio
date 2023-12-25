@@ -172,7 +172,8 @@ class _MyHomeState extends State<MyHome> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              mySpecialization(FontAwesomeIcons.android, 'Android')
+                              mySpecialization(
+                                  FontAwesomeIcons.android, 'Android')
                             ],
                           ),
                         ])
