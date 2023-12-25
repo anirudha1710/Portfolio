@@ -23,10 +23,18 @@ class _MyHomeState extends State<MyHome> {
     ],
   ).createShader(const Rect.fromLTWH(0, 0, 200.0, 70.0));
 
+  final Shader overallTextGradient = const LinearGradient(
+    colors: <Color>[
+      Color.fromARGB(255, 43, 255, 1),
+      Color.fromARGB(255, 255, 255, 0),
+    ],
+  ).createShader(const Rect.fromLTWH(0, 0, 200.0, 70.0));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromARGB(244, 1, 60, 255),
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
           leading: PopupMenuButton(
             icon: const Icon(Icons.menu),
