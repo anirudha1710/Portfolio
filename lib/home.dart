@@ -63,13 +63,17 @@ class _MyHomeState extends State<MyHome> {
         margin: const EdgeInsets.all(0),
         color: const Color.fromARGB(255, 30, 31, 30),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(path, height: 50, width: 50,),
+            SvgPicture.asset(
+              path,
+              height: 50,
+              width: 50,
+            ),
             const SizedBox(
               height: 10,
             ),
-
             Text(
               text,
               style: TextStyle(
@@ -134,8 +138,42 @@ class _MyHomeState extends State<MyHome> {
               snappings: [0.4, 0.7, 1.0],
               positioning: SnapPositioning.relativeToAvailableSpace,
             ),
-            body: const Center(
-              child: Text('This widget is below the SlidingSheet'),
+            body: Container(
+              child: Stack(children: [
+                Container(
+                  margin: EdgeInsets.all(40),
+                  child: ShaderMask(
+                    shaderCallback: (bound) {
+                      return const LinearGradient(
+                              begin: Alignment.center,
+                              end: Alignment.bottomCenter,
+                              colors: [Colors.black, Colors.transparent])
+                          .createShader(
+                              Rect.fromLTRB(0, 0, bound.width, bound.height));
+                    },
+                    blendMode: BlendMode.dstIn,
+                    child: Image.asset(
+                      'assets/img.png',
+                      height: 400,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * 0.49),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Anirudha Sharma',
+                        style: TextStyle(
+                            foreground: Paint()..shader = headerGradient),
+                      )
+                    ],
+                  ),
+                )
+              ]),
             ),
             builder: (context, state) {
               return Container(
@@ -199,8 +237,7 @@ class _MyHomeState extends State<MyHome> {
                           const SizedBox(
                             height: 15,
                           ),
-                        ]
-                    )
+                        ])
                   ],
                 ),
               );
