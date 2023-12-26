@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_sheet2/sliding_sheet2.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({Key? key}) : super(key: key);
@@ -55,7 +55,7 @@ class _MyHomeState extends State<MyHome> {
     );
   }
 
-  mySpecialization(IconData iconData, String text) {
+  mySpecialization(String path, String text) {
     return SizedBox(
       width: 105,
       height: 115,
@@ -63,16 +63,13 @@ class _MyHomeState extends State<MyHome> {
         margin: const EdgeInsets.all(0),
         color: const Color.fromARGB(255, 30, 31, 30),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Column(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FaIcon(
-              iconData,
-              size: 50, // Specify the icon size
-              color: Colors.white,
-            ),
+            SvgPicture.asset(path, height: 50, width: 50,),
             const SizedBox(
               height: 10,
             ),
+
             Text(
               text,
               style: TextStyle(
@@ -172,11 +169,38 @@ class _MyHomeState extends State<MyHome> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              mySpecialization(
-                                  FontAwesomeIcons.android, 'Android')
+                              mySpecialization('assets/android.svg', 'Android'),
+                              mySpecialization('assets/github.svg', 'Github'),
+                              mySpecialization('assets/java.svg', 'Java'),
                             ],
                           ),
-                        ])
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              mySpecialization('assets/flutter.svg', 'Flutter'),
+                              mySpecialization('assets/dart.svg', 'Dart'),
+                              mySpecialization('assets/kotlin.svg', 'Kotlin'),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              mySpecialization('assets/aws.svg', 'Aws'),
+                              mySpecialization('assets/python.svg', 'Python'),
+                              mySpecialization('assets/git.svg', 'Git'),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                        ]
+                    )
                   ],
                 ),
               );
@@ -185,3 +209,4 @@ class _MyHomeState extends State<MyHome> {
         ));
   }
 }
+//https://www.youtube.com/watch?v=5E3R0Xdo-aU
