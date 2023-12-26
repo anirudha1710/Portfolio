@@ -138,43 +138,54 @@ class _MyHomeState extends State<MyHome> {
               snappings: [0.4, 0.7, 1.0],
               positioning: SnapPositioning.relativeToAvailableSpace,
             ),
-            body: Container(
-              child: Stack(children: [
-                Container(
-                  margin: EdgeInsets.all(40),
-                  child: ShaderMask(
-                    shaderCallback: (bound) {
-                      return const LinearGradient(
-                              begin: Alignment.center,
-                              end: Alignment.bottomCenter,
-                              colors: [Colors.black, Colors.transparent])
-                          .createShader(
-                              Rect.fromLTRB(0, 0, bound.width, bound.height));
-                    },
-                    blendMode: BlendMode.dstIn,
-                    child: Image.asset(
-                      'assets/img.png',
-                      height: 400,
-                      fit: BoxFit.contain,
-                    ),
+            body: Stack(children: [
+              Container(
+                margin: const EdgeInsets.all(40),
+                child: ShaderMask(
+                  shaderCallback: (bound) {
+                    return const LinearGradient(
+                            begin: Alignment.center,
+                            end: Alignment.bottomCenter,
+                            colors: [Colors.black, Colors.transparent])
+                        .createShader(
+                            Rect.fromLTRB(0, 0, bound.width, bound.height));
+                  },
+                  blendMode: BlendMode.dstIn,
+                  child: Image.asset(
+                    'assets/img.png',
+                    alignment: Alignment.topCenter,
+                    height: 300,
+                    fit: BoxFit.contain,
                   ),
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height * 0.49),
-                  child: Column(
-                    children: [
-                      Text(
-                        'Anirudha Sharma',
-                        style: TextStyle(
-                            foreground: Paint()..shader = headerGradient),
-                      )
-                    ],
-                  ),
-                )
-              ]),
-            ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.49),
+                child: Column(
+                  children: [
+                    Text(
+                      'Anirudha Sharma',
+                      style: TextStyle(
+                          foreground: Paint()..shader = headerGradient,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      'Android Developer',
+                      style: TextStyle(
+                          foreground: Paint()..shader = highlightGradient,
+                          fontSize: 16,
+                          ),
+                    ),
+                  ],
+                ),
+              )
+            ]),
             builder: (context, state) {
               return Container(
                 margin: const EdgeInsets.only(left: 20, right: 20, top: 30),

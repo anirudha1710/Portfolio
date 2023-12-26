@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/about.dart';
 import 'package:my_portfolio/home.dart';
 
 void main() {
@@ -6,8 +7,8 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'home',
     routes: {
-      'home': (context) => MyHome(),
-      //'about':(context ) => About(),
+      'home': (context) => const MyHome(),
+      'about':(context ) => const About(),
     },
   ));
 }
