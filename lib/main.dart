@@ -8,7 +8,7 @@ void main() {
     initialRoute: 'home',
     routes: {
       'home': (context) => const MyHome(),
-      'about':(context ) => const About(),
+      'about': (context) => const About(),
     },
   ));
 }
