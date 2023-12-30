@@ -36,8 +36,6 @@ class _AboutState extends State<About> {
     ],
   ).createShader(const Rect.fromLTWH(0, 0, 200.0, 70.0));
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,110 +46,114 @@ class _AboutState extends State<About> {
         backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
-        child: Stack(children: [
-          Container(
-            margin: const EdgeInsets.all(40),
-            child: ShaderMask(
-              shaderCallback: (bound) {
-                return const LinearGradient(
-                        begin: Alignment.center,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.transparent])
-                    .createShader(
-                        Rect.fromLTRB(0, 0, bound.width, bound.height));
-              },
-              blendMode: BlendMode.dstIn,
-              child: Image.asset(
-                'assets/img.png',
-                alignment: Alignment.topCenter,
-                height: 300,
-                fit: BoxFit.contain,
+        child: Stack(
+          children: [
+            Container(
+              margin: const EdgeInsets.all(40),
+              child: ShaderMask(
+                shaderCallback: (bound) {
+                  return const LinearGradient(
+                          begin: Alignment.center,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.black, Colors.transparent])
+                      .createShader(
+                          Rect.fromLTRB(0, 0, bound.width, bound.height));
+                },
+                blendMode: BlendMode.dstIn,
+                child: Image.asset(
+                  'assets/img.png',
+                  alignment: Alignment.topCenter,
+                  height: 300,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            margin:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.55),
-            child: Column(
-              children: [
-                const Text(
-                  'Hello I am',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'Anirudha Sharma',
-                  style: TextStyle(
-                      foreground: Paint()..shader = headerGradient,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 4,
-                ),
-                Text(
-                  'Android Developer',
-                  style: TextStyle(
-                    foreground: Paint()..shader = highlightGradient,
-                    fontSize: 20,
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.55),
+              child: Column(
+                children: [
+                  const Text(
+                    'Hello I am',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  width: 120,
-                  child: TextButton(
-                    onPressed: (() {}),
-                    child: const Text('Hire Me'),
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
+                  Text(
+                    'Anirudha Sharma',
+                    style: TextStyle(
+                        foreground: Paint()..shader = headerGradient,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Text(
+                    'Android Developer',
+                    style: TextStyle(
+                      foreground: Paint()..shader = highlightGradient,
+                      fontSize: 20,
                     ),
                   ),
-                ),
-                const SizedBox(
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    customButton(path: 'assets/github.svg',),
-                  ],
-                )
-              ],
-            ),
-          )
-        ]),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    width: 120,
+                    child: TextButton(
+                      onPressed: (() {}),
+                      child: const Text('Hire Me'),
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomButton(path: 'assets/github.svg'),
+                      CustomButton(path: 'assets/github.svg'),
+                      CustomButton(path: 'assets/github.svg'),
+                      CustomButton(path: 'assets/github.svg'),
+                      CustomButton(path: 'assets/github.svg'),
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
 }
 //https://www.youtube.com/watch?v=tH_ZY-bHidM
 
-class customButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String path;
-  const customButton({super.key,required this.path});
+
+  const CustomButton({super.key, required this.path});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: (() {}),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-              ),
-              child: SvgPicture.asset(
+        children: [
+          InkWell(
+            onTap: (){},
+            child:
+              SvgPicture.asset(
                 path,
-                height: 10,
+                height: 40,
               ),
-            ),
-          ]),
+          ),
+        ],
+      ),
     );
   }
 }
