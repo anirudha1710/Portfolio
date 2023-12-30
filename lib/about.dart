@@ -105,15 +105,17 @@ class _AboutState extends State<About> {
                   SizedBox(
                     width: 120,
                     child: TextButton(
-                      onPressed: (() {}),
+                      onPressed: (() {
+                        Navigator.pushNamed(context, 'home');
+                      }),
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.white,
                         foregroundColor: Colors.black,
                       ),
-                      child: const Text('Hire Me'),
+                      child: const Text('My Skills'),
                     ),
                   ),
-                  const SizedBox(),
+                  const SizedBox(height: 20,),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
