@@ -118,10 +118,8 @@ class _AboutState extends State<About> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomButton(path: 'assets/github.svg'),
-                      CustomButton(path: 'assets/github.svg'),
-                      CustomButton(path: 'assets/github.svg'),
-                      CustomButton(path: 'assets/github.svg'),
-                      CustomButton(path: 'assets/github.svg'),
+                      CustomButton(path: 'assets/linkedin.svg'),
+                      CustomButton(path: 'assets/instagram.svg'),
                     ],
                   )
                 ],

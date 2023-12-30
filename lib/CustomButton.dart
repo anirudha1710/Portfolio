@@ -14,9 +14,12 @@ class CustomButton extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {},
-            child: SvgPicture.asset(
-              path,
-              height: 40,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 5),
+              child: SvgPicture.asset(
+                path,
+                height: 40,
+              ),
             ),
           ),
         ],
