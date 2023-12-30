@@ -106,11 +106,11 @@ class _AboutState extends State<About> {
                     width: 120,
                     child: TextButton(
                       onPressed: (() {}),
-                      child: const Text('Hire Me'),
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.white,
                         foregroundColor: Colors.black,
                       ),
+                      child: const Text('Hire Me'),
                     ),
                   ),
                   const SizedBox(),
