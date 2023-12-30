@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:my_portfolio/CustomButton.dart';
 
 class About extends StatefulWidget {
   const About({super.key});
@@ -134,26 +135,4 @@ class _AboutState extends State<About> {
 }
 //https://www.youtube.com/watch?v=tH_ZY-bHidM
 
-class CustomButton extends StatelessWidget {
-  final String path;
 
-  const CustomButton({super.key, required this.path});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      child: Column(
-        children: [
-          InkWell(
-            onTap: (){},
-            child:
-              SvgPicture.asset(
-                path,
-                height: 40,
-              ),
-          ),
-        ],
-      ),
-    );
-  }
-}
