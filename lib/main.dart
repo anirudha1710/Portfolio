@@ -6,7 +6,7 @@ import 'package:my_portfolio/projects.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: 'projects',
+    initialRoute: 'about',
     routes: {
       'home': (context) => const MyHome(),
       'about': (context) => const About(),
