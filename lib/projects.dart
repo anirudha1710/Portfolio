@@ -29,50 +29,51 @@ class _MyProjectsState extends State<MyProjects> {
                   color: const Color(0xff262628),
                   child: Container(
                     margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
-                    child: const Column(
+                    child:  Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Flutter',
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
-                        Text(
+                        const Text(
                           'Click to code',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 30,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 3,
                         ),
-                        Text(
+                        const Text(
                           'A Chat Gpt App',
                           style: TextStyle(
                             color: Colors.white70,
                             fontSize: 16,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.star,
                               color: Colors.white70,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 4,
                             ),
-                            Text(
+                            const Text(
                               '1',
                               style: TextStyle(color: Colors.white),
                             ),
-                            CustomButton(path: 'assets/github.svg'),
+                            Expanded(child: Container()),
+                            const CustomButton(path: 'assets/github.svg'),
                           ],
                         )
                       ],
