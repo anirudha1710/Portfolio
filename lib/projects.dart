@@ -28,7 +28,7 @@ class _MyProjectsState extends State<MyProjects> {
                 child: Card(
                   color: const Color(0xff262628),
                   child: Container(
-                    margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
+                    margin: const EdgeInsets.only(left: 20, right: 20, top: 40),
                     child:  Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
