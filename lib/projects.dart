@@ -50,7 +50,7 @@ class _MyProjectsState extends State<MyProjects> {
                Text(
                 lang,
                 style: TextStyle(
-                  foreground: Paint()..shader = highlightGradient,
+                  foreground: Paint()..shader = headerGradient,
                   fontSize: 18,
                 ),
               ),
@@ -58,19 +58,20 @@ class _MyProjectsState extends State<MyProjects> {
                 height: 15,
               ),
                Text(
-                title,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
+                 desc,
+                style: TextStyle(
+                  foreground: Paint()..shader = highlightGradient,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold
+                ),
               ),
                const SizedBox(
                 height: 3,
               ),
                Text(
-                desc,
-                style: const TextStyle(
-                  color: Colors.white70,
+                title,
+                style: TextStyle(
+                  foreground: Paint()..shader = overallTextGradient,
                   fontSize: 16,
                 ),
               ),
