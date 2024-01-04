@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/CustomButton.dart';
 
 class MyProjects extends StatefulWidget {
   const MyProjects({super.key});
@@ -25,13 +26,18 @@ class _MyProjectsState extends State<MyProjects> {
                 height: 220,
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: Card(
-                  color: Color(0xff262628),
+                  color: const Color(0xff262628),
                   child: Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
                     child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Flutter',
                           style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                        SizedBox(
+                          height: 15,
                         ),
                         Text(
                           'Click to code',
@@ -40,6 +46,9 @@ class _MyProjectsState extends State<MyProjects> {
                               fontSize: 30,
                               fontWeight: FontWeight.bold),
                         ),
+                        SizedBox(
+                          height: 3,
+                        ),
                         Text(
                           'A Chat Gpt App',
                           style: TextStyle(
@@ -47,9 +56,23 @@ class _MyProjectsState extends State<MyProjects> {
                             fontSize: 16,
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           children: [
-
+                            Icon(
+                              Icons.star,
+                              color: Colors.white70,
+                            ),
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text(
+                              '1',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            CustomButton(path: 'assets/github.svg'),
                           ],
                         )
                       ],
