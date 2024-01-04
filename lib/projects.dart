@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MyProjects extends StatefulWidget {
@@ -11,10 +10,10 @@ class MyProjects extends StatefulWidget {
 class _MyProjectsState extends State<MyProjects> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Projects'),
+        title: const Text('Projects'),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -24,11 +23,37 @@ class _MyProjectsState extends State<MyProjects> {
             children: [
               Container(
                 height: 220,
-                width: MediaQuery.of(context).size.width *0.9,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: Card(
                   color: Color(0xff262628),
                   child: Container(
-                    child: Column(),
+                    child: const Column(
+                      children: [
+                        Text(
+                          'Flutter',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                        Text(
+                          'Click to code',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          'A Chat Gpt App',
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Row(
+                          children: [
+
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               )
