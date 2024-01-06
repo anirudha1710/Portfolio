@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_portfolio/CustomButton.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class About extends StatefulWidget {
   const About({super.key});
@@ -115,13 +116,30 @@ class _AboutState extends State<About> {
                       child: const Text('My Skills'),
                     ),
                   ),
-                  const SizedBox(height: 20,),
-                  const Row(
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CustomButton(path: 'assets/github.svg'),
-                      CustomButton(path: 'assets/linkedin.svg'),
-                      CustomButton(path: 'assets/instagram.svg'),
+                      CustomButton(
+                        path: 'assets/github.svg',
+                        onPressed: () => launchUrl(
+                          Uri.parse('https://github.com/stp2003'),
+                        ),
+                      ),
+                      CustomButton(
+                        path: 'assets/linkedin.svg',
+                        onPressed: () => launchUrl(
+                          Uri.parse('https://github.com/stp2003'),
+                        ),
+                      ),
+                      CustomButton(
+                        path: 'assets/instagram.svg',
+                        onPressed: () => launchUrl(
+                          Uri.parse('https://github.com/stp2003'),
+                        ),
+                      ),
                     ],
                   )
                 ],
@@ -133,6 +151,3 @@ class _AboutState extends State<About> {
     );
   }
 }
-
-
-
