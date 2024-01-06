@@ -45,41 +45,43 @@ class _MyCertificateState extends State<MyCertificate> {
         color: const Color(0xff262628),
         child: Container(
           margin: const EdgeInsets.only(left: 20, right: 20, top: 40),
-          child:  Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                lang,
-                style: TextStyle(
-                  foreground: Paint()..shader = headerGradient,
-                  fontSize: 18,
+          child:  SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  lang,
+                  style: TextStyle(
+                    foreground: Paint()..shader = headerGradient,
+                    fontSize: 18,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                desc,
-                style: TextStyle(
-                    foreground: Paint()..shader = highlightGradient,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold
+                const SizedBox(
+                  height: 15,
                 ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                  foreground: Paint()..shader = overallTextGradient,
-                  fontSize: 16,
+                Text(
+                  desc,
+                  style: TextStyle(
+                      foreground: Paint()..shader = highlightGradient,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-            ],
+                const SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  title,
+                  style: TextStyle(
+                    foreground: Paint()..shader = overallTextGradient,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -99,8 +101,8 @@ class _MyCertificateState extends State<MyCertificate> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
-              myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
-              myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
+              myCert('Coursera', 'Click for link', 'Fundamentals of Global Energy Business'),
+              myCert('Ethnus', 'Click for link', 'Mern Full Stack Internship Program'),
               myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
               myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
               myCert('Coursera', 'Click for link', 'AWS Cloud Practitioner'),
