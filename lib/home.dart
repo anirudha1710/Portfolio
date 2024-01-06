@@ -111,6 +111,17 @@ class _MyHomeState extends State<MyHome> {
               PopupMenuItem(
                 child: TextButton(
                   child: const Text(
+                    'Certificates',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'certificates');
+                  },
+                ),
+              ),
+              PopupMenuItem(
+                child: TextButton(
+                  child: const Text(
                     'About',
                     style: TextStyle(color: Colors.white),
                   ),
