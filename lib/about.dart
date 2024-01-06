@@ -125,19 +125,19 @@ class _AboutState extends State<About> {
                       CustomButton(
                         path: 'assets/github.svg',
                         onPressed: () => launchUrl(
-                          Uri.parse('https://github.com/stp2003'),
+                          Uri.parse('https://github.com/anirudha1710'),
                         ),
                       ),
                       CustomButton(
                         path: 'assets/linkedin.svg',
                         onPressed: () => launchUrl(
-                          Uri.parse('https://github.com/stp2003'),
+                          Uri.parse('https://www.linkedin.com/in/anirudha-sharma-a8080921a/'),
                         ),
                       ),
                       CustomButton(
                         path: 'assets/instagram.svg',
                         onPressed: () => launchUrl(
-                          Uri.parse('https://github.com/stp2003'),
+                          Uri.parse('https://www.instagram.com/anirudha_17.10/?next=%2F'),
                         ),
                       ),
                     ],

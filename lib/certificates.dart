@@ -92,7 +92,7 @@ class _MyCertificateState extends State<MyCertificate> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Projects'),
+        title: const Text('Certificates'),
       ),
       body: SingleChildScrollView(
         child: Container(
