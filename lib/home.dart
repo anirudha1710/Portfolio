@@ -103,7 +103,9 @@ class _MyHomeState extends State<MyHome> {
                     'Projects',
                     style: TextStyle(color: Colors.white),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'Projects');
+                  },
                 ),
               ),
               PopupMenuItem(
