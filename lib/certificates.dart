@@ -25,9 +25,9 @@ class _MyCertificateState extends State<MyCertificate> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MyCert(lang: 'Coursera', desc: 'Click for link', title: 'AWS Cloud Practitioner', onPressed: ()=> launchUrl(Uri.parse('https://github.com/anirudha1710/ChatGpt_App'),),),
-              MyCert(lang: 'Coursera', desc: 'Click for link', title: 'Fundamentals of Global Energy Business', onPressed: ()=> launchUrl(Uri.parse('https://github.com/anirudha1710/ChatGpt_App'),),),
-              MyCert(lang: 'Ethnus', desc: 'Click for link', title: 'Mern Full Stack Internship Program', onPressed: ()=> launchUrl(Uri.parse('https://github.com/anirudha1710/ChatGpt_App'),),),
+              MyCert(lang: 'Coursera', desc: 'AWS Cloud Practitioner', title: 'Click for link', onPressed: ()=> launchUrl(Uri.parse('https://coursera.org/share/f544aaa20f6643a5beb601adeccc5a92'),),),
+              MyCert(lang: 'Coursera', desc: 'Fundamentals of Global Energy Business', title: 'Click for link', onPressed: ()=> launchUrl(Uri.parse('https://coursera.org/share/ee7e1b8d6a11f1e4c0198ca480f07672'),),),
+              MyCert(lang: 'Ethnus', desc: 'Mern Full Stack Internship Program', title: 'Click for link', onPressed: (){}),
             ],
           ),
         ),
