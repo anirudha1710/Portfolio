@@ -211,9 +211,8 @@ class _MyHomeState extends State<MyHome> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        mySkills('40', 'Projects'),
-                        mySkills('40', 'Projects'),
-                        mySkills('40', 'Projects'),
+                        mySkills('9', 'Projects'),
+                        mySkills('5', 'Certificates'),
                       ],
                     ),
                     const SizedBox(
